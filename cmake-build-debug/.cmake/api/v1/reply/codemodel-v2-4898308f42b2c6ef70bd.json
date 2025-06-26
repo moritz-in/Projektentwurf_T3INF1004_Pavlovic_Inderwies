@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.11"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Projektentwurf_T3INF1004_Pavlovic_Inderwies",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Projektentwurf_T3INF1004_Pavlovic_Inderwies::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Projektentwurf_T3INF1004_Pavlovic_Inderwies-Debug-c17465558499867f86b7.json",
+					"name" : "Projektentwurf_T3INF1004_Pavlovic_Inderwies",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/moritzinderwies/CLionProjects/Projektentwurf_T3INF1004/cmake-build-debug",
+		"source" : "/Users/moritzinderwies/CLionProjects/Projektentwurf_T3INF1004"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
