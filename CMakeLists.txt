@@ -14,6 +14,8 @@ add_executable(Projektentwurf_T3INF1004_Pavlovic_Inderwies
         main.cpp
         Game.cpp
         Game.h
+        Player.h
+        Player.cpp
 )
 
 target_link_libraries(Projektentwurf_T3INF1004_Pavlovic_Inderwies ${OpenCV_LIBS})
