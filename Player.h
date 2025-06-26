@@ -6,7 +6,8 @@
 class Player {
 public:
     Player(const std::string& name);
-    
+
+    //Getter und Setter Funktionen + Score Funktionalität
     const std::string& getName() const;
     int getScore() const;
     
