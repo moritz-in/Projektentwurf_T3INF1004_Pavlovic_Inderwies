@@ -13,18 +13,18 @@ const std::string& Player::getName() const
 //Getterfunktion Score
 int Player::getScore() const
 {
-  return m_score;
+    return m_score;
 };
 
 //Hochzählen des Score
 void Player::addScore(int points)
 {
-  m_score += points;
+    m_score += points;
 };
 
 //Setterfunktion Score
 void Player::setScore(int newScore)
 {
-  m_score = newScore;
+    m_score = newScore;
 };
 
