@@ -4,18 +4,28 @@
 #include <opencv2/opencv.hpp>
 #include <string>
 
+
 class Game {
 public:
     Game(const std::string& cascadePath);
     ~Game();
+
     bool initialize();
+    void displayMenu();
+    bool setupCamera();
+    void processFrame(cv::Mat& frame);
+    void startGame();
+    void endGame();
     void run();
+
 private:
-    cv::VideoCapture cap;
-    cv::CascadeClassifier faceCascade;
-    const std::string windowName = "Face Detection";
-    int frameWidth;
-    int frameHeight;
+    cv::VideoCapture m_cap;
+    cv::CascadeClassifier m_faceCascade;
+    const std::string m_windowName = "Face Detection";
+    int m_frameWidth;
+    int m_frameHeight;
+
+    std::shared_ptr<Player> player;
 };
 
 #endif // GAME_H
