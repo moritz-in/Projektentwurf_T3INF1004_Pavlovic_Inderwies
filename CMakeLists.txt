@@ -11,9 +11,9 @@ find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 
 add_executable(Projektentwurf_T3INF1004_Pavlovic_Inderwies
-        ../Projektentwurf_T3INF1004/main.cpp
-        ../Projektentwurf_T3INF1004/Game.cpp
-        ../Projektentwurf_T3INF1004/Game.h
+        main.cpp
+        Game.cpp
+        Game.h
 )
 
 target_link_libraries(Projektentwurf_T3INF1004_Pavlovic_Inderwies ${OpenCV_LIBS})
