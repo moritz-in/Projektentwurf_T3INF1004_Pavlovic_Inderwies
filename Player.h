@@ -14,8 +14,8 @@ public:
     void setScore(int newScore);
     
 private:
-    std::string name;
-    int score = 0;
+    std::string m_name;
+    int m_score = 0;
 };
 
 #endif // PLAYER_H

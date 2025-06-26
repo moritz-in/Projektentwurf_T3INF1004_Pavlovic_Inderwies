@@ -1,30 +1,30 @@
 #include "Player.h"
 
 //Konstruktor mit namensübergabe
-Player::Player(const std::string& name) : name(name) {
+Player::Player(const std::string& name) : m_name(name) {
 };
 
 //Getterfunktion Name
 const std::string& Player::getName() const
 {
-    return name;
+    return m_name;
 };
 
 //Getterfunktion Score
 int Player::getScore() const
 {
-  return score;
+  return m_score;
 };
 
 //Hochzählen des Score
 void Player::addScore(int points)
 {
-  score += points;
+  m_score += points;
 };
 
 //Setterfunktion Score
 void Player::setScore(int newScore)
 {
-  score = newScore;
+  m_score = newScore;
 };
 
