@@ -26,7 +26,7 @@ public:
     int getType() const;
 
 private:
-    cv::Rect m_boundingRect;
+    cv::Rect m_positionRect;
     cv::Scalar m_color;
     Shape m_shape;
 
