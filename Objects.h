@@ -18,8 +18,9 @@ public:
                const cv::Scalar& color, Shape shape);
 
     void update();
-    void draw(cv::Mat& frame) const; //TODO!!!
+    void drawObject(cv::Mat& frame) const;
     void markForRemoval();
+    bool shouldBeRemoved() const;
 
     const cv::Rect& getRect() const;
     int getType() const;
