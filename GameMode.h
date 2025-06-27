@@ -25,6 +25,10 @@ protected:
 
     void spawnObject(int type, const cv::Scalar& color, Shape shape);
     void updateObjects();
+    virtual void handleCollision(Objects* obj) = 0;
+    void checkCollisions(const cv::Rect& faceRect);
+    void removeOffscreenObjects();
+
 
 };
 

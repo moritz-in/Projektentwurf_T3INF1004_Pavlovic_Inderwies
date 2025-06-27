@@ -24,7 +24,7 @@ void GameMode::spawnObject(int type, const cv::Scalar& color, Shape shape){
     ));
 }
 
-//objekte werden mit der update() Funktion aus Objects aktualisiert (bewegen sich nach unten)
+//objekte werden mit der update() Funkion aus Objects aktualisiert (bewegen sich nach unten)
 void GameMode::updateObjects()
 {
     for(auto& object : objects){
@@ -37,4 +37,28 @@ void GameMode::draw(cv::Mat& frame) {
     for (auto& obj : objects) {
         obj->drawObject(frame);
     }
+}
+//Checkt ob kollision, je nachdem welche art von kollision entfernen oder Handlecolision aufrufen
+void GameMode::checkCollisions(const cv::Rect& faceRect) {
+    for (auto& obj : objects) {
+        if (obj->getRect().y > m_frameHeight) {
+            // Nur markieren zum Entfernen, keine Punkte vergeben
+            obj->markForRemoval();
+            continue;
+        }
+
+        if ((faceRect & obj->getRect()).area() > 0) {
+            handleCollision(obj.get());
+        }
+    }
+}
+//entfernt nichtmehr benötigte objekte
+void GameMode::removeOffscreenObjects() {
+    objects.erase(
+        std::remove_if(objects.begin(), objects.end(),
+            [](const std::unique_ptr<Objects>& obj) {
+                return obj->shouldBeRemoved();
+            }),
+        objects.end()
+    );
 }
