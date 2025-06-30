@@ -51,7 +51,7 @@ void CatchMode::update(const cv::Rect& faceRect, cv::Mat& frame)
 
 bool CatchMode::isGameOver() const
 {
-    return m_objectsSpawned >= m_totalObjects && objects.empty();
+    return m_objectsSpawned >= m_totalObjects && m_objects.empty();
 }
 
 void CatchMode::draw(cv::Mat& frame)
