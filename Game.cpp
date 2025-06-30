@@ -29,7 +29,7 @@ bool Game::initialize() {
     return true;
 }
 
-// Menu auf der Konsole zeigen
+// Menu auf der Konsole zeigen  // TODO auf falsche eingaben prüfen
 void Game::displayMenu() {
     std::cout << "=== Reaktionsspiel ===" << std::endl;
     std::cout << "Trage deinen Namen ein: ";
