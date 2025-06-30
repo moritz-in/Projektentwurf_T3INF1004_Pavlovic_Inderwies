@@ -51,7 +51,7 @@ void DodgeMode::update(const cv::Rect& faceRect, cv::Mat& frame) {
     updateObjects();
 
     // Dann auf Kollisionen und durchgefallene Bälle prüfen
-    for (auto& obj : objects) {
+    for (auto& obj : m_objects) {
         if (obj->getRect().y > m_frameHeight && !obj->shouldBeRemoved()) {
             handleObjectPassed();
             obj->markForRemoval();
