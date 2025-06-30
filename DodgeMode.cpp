@@ -7,11 +7,12 @@ DodgeMode::DodgeMode(std::shared_ptr<Player> player, int width, int height)
 }
 
 //Erszeugung eines zufälligen Objekts
-void DodgeMode::spawnRandomBall() {
+void DodgeMode::spawnRandomBall()
+{
     unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
     std::default_random_engine generator(seed);
     std::uniform_int_distribution<int> colorDist(0, 2);
-    std::uniform_int_distribution<int> spawnDelayDist(1500, 3000); // 1.5-3 Sekunden zwischen Spawns
+    std::uniform_int_distribution<int> spawnDelayDist(1000, 3000); // 1-3 Sekunden zwischen Spawns
 
     int colorChoice = colorDist(generator);
     cv::Scalar color;
@@ -26,7 +27,8 @@ void DodgeMode::spawnRandomBall() {
 }
 
 //Wenn objekt getroffen --> Spiel zuende
-void DodgeMode::handleCollision(Objects* obj) {
+void DodgeMode::handleCollision(Objects* object)
+{
     m_gameOver = true;
 }
 
@@ -36,34 +38,35 @@ void DodgeMode::handleObjectPassed() {
 }
 
 void DodgeMode::update(const cv::Rect& faceRect, cv::Mat& frame) {
-    // Neue Bälle alle 1.5-3 sekunden
-    unsigned int currentTime = cv::getTickCount() / cv::getTickFrequency();
+    int currentTime = static_cast<int>(cv::getTickCount() / cv::getTickFrequency());
+
+    static std::default_random_engine generator(std::random_device{}());
+    static std::uniform_int_distribution<int> delayDist(1000, 3000);  // 1 bis 3 Sekunden in ms
+
+    //wenn genug Zeit seit dem letzten Spawn vergeht wird ein neuer Ball gespawnt
     if (currentTime - m_lastSpawnTime >= m_spawnDelay) {
         spawnRandomBall();
         m_lastSpawnTime = currentTime;
-        // Neue Verzögerung für nächsten Spawn setzen
-        unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
-        std::default_random_engine generator(seed);
-        m_spawnDelay = m_spawnDelayDist(generator) / 1000.0; // Convert ms to seconds
+
+        m_spawnDelay = delayDist(generator) / 1000;  // zufällige Wartezeit in Sekunden
     }
 
-    // Zuerst Objekte updaten (Positionen aktualisieren)
     updateObjects();
 
-    // Dann auf Kollisionen und durchgefallene Bälle prüfen
-    for (auto& obj : objects) {
-        if (obj->getRect().y > m_frameHeight && !obj->shouldBeRemoved()) {
+    for (auto& object : objects) {
+      //falls Objekt auf Gesicht trifft oder auf den "Boden" wird das entfernt
+        if (object->getRect().y > m_frameHeight && !object->shouldBeRemoved()) {
             handleObjectPassed();
-            obj->markForRemoval();
+            object->markForRemoval(); //zum Entfernen markieren
         }
     }
 
-    // Dann Kollisionen mit dem Gesicht prüfen
-    checkCollisions(faceRect);
-
-    // Zum Schluss Objekte entfernen
-    removeOffscreenObjects();
+    checkCollisions(faceRect);  //prüfen auf Kollision mit dem Spieler
+    removeOffscreenObjects();    // Objekte entfernen die nicht mehr benötigt werden
 }
-void DodgeMode::draw(cv::Mat& frame) {
+
+void DodgeMode::draw(cv::Mat& frame)
+{
+  //Zeichnet alle Objekte (wird von GameMode::draw gehandelt)
     GameMode::draw(frame);
 }
