@@ -21,7 +21,7 @@ protected:
     std::shared_ptr<Player> m_player;
     int m_frameWidth;
     int m_frameHeight;
-    std::vector<std::unique_ptr<Objects>> objects;
+    std::vector<std::unique_ptr<Objects>> m_objects;
 
     void spawnObject(int type, const cv::Scalar& color, Shape shape);
     void updateObjects();

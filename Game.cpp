@@ -36,7 +36,7 @@ void Game::displayMenu() {
     std::string playerName;
     std::getline(std::cin, playerName);
 
-    player = std::make_shared<Player>(playerName);
+    m_player = std::make_shared<Player>(playerName);
 }
 
 //Kamera öffnen und einstellen

@@ -25,8 +25,7 @@ private:
     const std::string m_windowName = "Face Detection";
     int m_frameWidth;
     int m_frameHeight;
-
-    std::shared_ptr<Player> player;
+    std::shared_ptr<Player> m_player;
 };
 
 #endif // GAME_H
