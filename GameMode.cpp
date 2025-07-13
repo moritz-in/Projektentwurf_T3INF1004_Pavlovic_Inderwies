@@ -13,6 +13,7 @@ void GameMode::spawnObject(int type, const cv::Scalar& color, Shape shape){
         srand(static_cast<unsigned>(time(nullptr)));
         seeded = true;
     }
+    // TODO bessere Randomfunktion suchen
 // größe, geschwindigkeit und position werden zufällig bestimmt
     int size = 20 + rand() % 21;
     int x = rand() % m_frameWidth;
@@ -34,21 +35,21 @@ void GameMode::updateObjects()
 
 //ruft die drawObjectFunktion
 void GameMode::draw(cv::Mat& frame) {
-    for (auto& obj : m_objects) {
-        obj->drawObject(frame);
+    for (auto& object : m_objects) {
+        object->drawObject(frame);
     }
 }
 //Checkt ob kollision, je nachdem welche art von kollision entfernen oder Handlecolision aufrufen
 void GameMode::checkCollisions(const cv::Rect& faceRect) {
-    for (auto& obj : m_objects) {
-        if (obj->getRect().y > m_frameHeight) {
+    for (auto& object : m_objects) {
+        if (object->getRect().y > m_frameHeight) {
             // Nur markieren zum Entfernen, keine Punkte vergeben
-            obj->markForRemoval();
+            object->markForRemoval();
             continue;
         }
 
-        if ((faceRect & obj->getRect()).area() > 0) {
-            handleCollision(obj.get());
+        if ((faceRect & object->getRect()).area() > 0) {
+            handleCollision(object.get());
         }
     }
 }

@@ -6,14 +6,14 @@
 #define CATCHMODE_H
 #include "GameMode.h"
 
-class CatchMode : GameMode {
+class CatchMode : public GameMode {
 public:
     CatchMode(std::shared_ptr<Player> player, int width, int height, int totalObjects);
 
     void update(const cv::Rect& faceRect, cv::Mat& frame) override;
     void draw(cv::Mat& frame) override;
     bool isGameOver() const override;
-    void handleCollision(Objects* object) override; // override hinzugefügt
+    void handleCollision(Objects* object) override;
     void spawnNextObject();
 
 private:

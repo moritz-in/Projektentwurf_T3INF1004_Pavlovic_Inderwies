@@ -16,6 +16,16 @@ add_executable(Projektentwurf_T3INF1004_Pavlovic_Inderwies
         Game.h
         Player.h
         Player.cpp
+        Objects.h
+        Objects.cpp
+        GameMode.h
+        GameMode.cpp
+        CatchMode.h
+        CatchMode.cpp
+        DodgeMode.h
+        DodgeMode.cpp
+        Gui.h
+        Square.cpp
 )
 
 target_link_libraries(Projektentwurf_T3INF1004_Pavlovic_Inderwies ${OpenCV_LIBS})

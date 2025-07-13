@@ -11,7 +11,7 @@ void DodgeMode::spawnRandomBall() {
     unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
     std::default_random_engine generator(seed);
     std::uniform_int_distribution<int> colorDist(0, 2);
-    std::uniform_int_distribution<int> spawnDelayDist(1500, 3000); // 1.5-3 Sekunden zwischen Spawns
+    std::uniform_int_distribution<int> spawnDelayDist(1000, 3000); // 1-3 Sekunden zwischen Spawns
 
     int colorChoice = colorDist(generator);
     cv::Scalar color;

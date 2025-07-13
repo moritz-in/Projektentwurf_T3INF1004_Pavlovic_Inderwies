@@ -1,4 +1,4 @@
-# Install script for directory: /Users/moritzinderwies/CLionProjects/Projektentwurf_T3INF1004
+# Install script for directory: /Users/stefanpavlovic/Library/Mobile Documents/com~apple~CloudDocs/DHBW/2. Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -52,6 +52,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "/Users/moritzinderwies/CLionProjects/Projektentwurf_T3INF1004/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/Users/stefanpavlovic/Library/Mobile Documents/com~apple~CloudDocs/DHBW/2. Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

@@ -3,6 +3,9 @@
 
 #include <opencv2/opencv.hpp>
 #include <string>
+#include "CatchMode.h"
+#include "DodgeMode.h"
+#include "GameMode.h"
 #include "Player.h"
 
 
@@ -11,13 +14,13 @@ public:
     Game(const std::string& cascadePath);
     ~Game();
 
+    // TODO Unterschied run und startgame?
     bool initialize();
     void displayMenu();
     bool setupCamera();
     void processFrame(cv::Mat& frame);
-    void startGame();
-    void endGame();
     void run();
+    void endGame();
 
 private:
     cv::VideoCapture m_cap;
@@ -25,6 +28,8 @@ private:
     const std::string m_windowName = "Face Detection";
     int m_frameWidth;
     int m_frameHeight;
+
+    std::unique_ptr<GameMode> currentMode;
     std::shared_ptr<Player> m_player;
 };
 
