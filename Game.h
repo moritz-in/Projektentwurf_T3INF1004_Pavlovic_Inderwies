@@ -6,7 +6,10 @@
 #include "CatchMode.h"
 #include "DodgeMode.h"
 #include "GameMode.h"
+#include "Objects.h"
+#include "Gui.h"
 #include "Player.h"
+#include "Camera.h"
 
 
 class Game {
@@ -14,23 +17,20 @@ public:
     Game(const std::string& cascadePath);
     ~Game();
 
-    // TODO Unterschied run und startgame?
     bool initialize();
     void displayMenu();
-    bool setupCamera();
     void processFrame(cv::Mat& frame);
     void run();
     void endGame();
 
 private:
-    cv::VideoCapture m_cap;
+    Camera m_camera;
     cv::CascadeClassifier m_faceCascade;
-    const std::string m_windowName = "Face Detection";
-    int m_frameWidth;
-    int m_frameHeight;
+    const std::string m_windowName = "Face Game";
 
-    std::unique_ptr<GameMode> currentMode;
+    std::unique_ptr<GameMode> m_currentMode;
     std::shared_ptr<Player> m_player;
+    Gui m_gui;
 };
 
 #endif // GAME_H

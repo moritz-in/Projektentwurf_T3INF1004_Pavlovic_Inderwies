@@ -1,5 +1,7 @@
 #include "Player.h"
 
+#include "Objects.h"
+
 //Konstruktor mit namensübergabe
 Player::Player(const std::string& name) : m_name(name) {
 };

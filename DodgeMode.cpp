@@ -2,11 +2,11 @@
 #include <chrono>
 #include <random>
 
-DodgeMode::DodgeMode(std::shared_ptr<Player> player, int width, int height)
+DodgeMode::DodgeMode(std::shared_ptr<Player> player, const int width, const int height)
     : GameMode(player, width, height) {
 }
 
-//Erszeugung eines zufälligen Objekts
+//Erzeugung eines zufälligen Objekts
 void DodgeMode::spawnRandomBall() {
     unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
     std::default_random_engine generator(seed);
@@ -22,7 +22,7 @@ void DodgeMode::spawnRandomBall() {
         case 2: color = cv::Scalar(255, 0, 0); break; // Blau
     }
 
-    spawnObject(1, color, Shape::circle);
+    spawnObject(1, color, Shape::CIRCLE);
 }
 
 //Wenn objekt getroffen --> Spiel zuende
@@ -63,7 +63,4 @@ void DodgeMode::update(const cv::Rect& faceRect, cv::Mat& frame) {
 
     // Zum Schluss Objekte entfernen
     removeOffscreenObjects();
-}
-void DodgeMode::draw(cv::Mat& frame) {
-    GameMode::draw(frame);
 }

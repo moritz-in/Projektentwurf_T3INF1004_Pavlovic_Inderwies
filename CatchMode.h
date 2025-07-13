@@ -11,7 +11,6 @@ public:
     CatchMode(std::shared_ptr<Player> player, int width, int height, int totalObjects);
 
     void update(const cv::Rect& faceRect, cv::Mat& frame) override;
-    void draw(cv::Mat& frame) override;
     bool isGameOver() const override;
     void handleCollision(Objects* object) override;
     void spawnNextObject();

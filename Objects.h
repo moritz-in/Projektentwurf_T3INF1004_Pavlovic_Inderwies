@@ -6,38 +6,26 @@
 #define OBJECTS_H
 #include <opencv2/opencv.hpp>
 
-// TODO Eigene Datei und ALL CAPS
 enum class Shape{
-   square,
-   circle
+   SQUARE,
+   CIRCLE
 };
 
-// TODO als Interface definieren und Kindklassen Square und Circle
+//Objects Klasse als Interface implemetiert
+
 class Objects {
 public:
+   virtual ~Objects() = default;
 
-    Objects(cv::Point position, cv::Size size, int speed, int type,
-               const cv::Scalar& color, Shape shape);
+   virtual cv::Rect getRect() const = 0;
+   virtual cv::Scalar getColor() const = 0;
+   virtual Shape getType() const = 0;
+   virtual cv::Mat& getFrame() = 0;
 
-    // TODO Alles virtual
-    void update();
-    // TODO GUI in Guiklasse verschieben
-    void drawObject(cv::Mat& frame) const;
-    void markForRemoval();
-    bool shouldBeRemoved() const;
-
-    const cv::Rect& getRect() const;
-    // TODO Bitte behalten, sonst machst du dir das Leben viel schwerer
-    int getType() const;
-
-private:
-    cv::Rect m_positionRect;
-    cv::Scalar m_color;
-    Shape m_shape;
-
-    int m_speed;
-    int m_type;
-    bool m_shouldRemove = false;
+   virtual void update() = 0;
+   virtual void markForRemoval() = 0;
+   virtual bool shouldBeRemoved() const = 0;
+   virtual void draw(cv::Mat& frame) const = 0;
 };
 
 

@@ -5,8 +5,8 @@
 #ifndef GUI_H
 #define GUI_H
 #include <vector>
-
 #include "Objects.h"
+#include "Circle.h"
 #include "Square.h"
 
 
@@ -19,15 +19,22 @@ public:
     void drawCircle(std::shared_ptr<Circle> circle);
     void drawText(std::string text, int x, int y);
     void showFrame();
-    int getKeyboard();
+    bool isEscapePressed();
 };
 
 inline void Gui::drawObjects(std::vector<std::shared_ptr<Objects>> objects) {
     for (auto object: objects) {
         switch (object->getType()) {
-            case Shape::square:
+            case Shape::SQUARE: {
                 std::shared_ptr<Square> square = std::static_pointer_cast<Square>(object);
                 drawSquare(square);
+                break;
+            }
+            case Shape::CIRCLE: {
+                std::shared_ptr<Circle> circle = std::static_pointer_cast<Circle>(object);
+                drawCircle(circle);
+                break;
+            }
         }
     }
 }

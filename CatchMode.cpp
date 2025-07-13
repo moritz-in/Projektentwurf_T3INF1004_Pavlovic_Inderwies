@@ -4,13 +4,13 @@
 
 #include "CatchMode.h"
 
-CatchMode::CatchMode(std::shared_ptr<Player> player, int width, int height, int totalObjects)
+CatchMode::CatchMode(std::shared_ptr<Player> player, const int width, const int height, const int totalObjects)
     : GameMode(player, width, height), m_totalObjects(totalObjects) {}
 
 // Falls das Objekt gefangen wird +1 Punkt
 void CatchMode::handleCollision(Objects* object)
 {
-    m_player->addScore(object->getType());
+    m_player->addScore(static_cast<int>(object->getType()));
     if (m_player->getScore() < 0) {  //negative Punkte sind verboten
         m_player->setScore(0);
     }
@@ -24,9 +24,9 @@ void CatchMode::spawnNextObject()
 
 // abwechselnd Objekte spawnen, einmal Kreis, einmal Quadrat
     if (m_objectsSpawned % 2 == 0) {
-        spawnObject(-1, cv::Scalar(0, 0, 255), Shape::circle);
+        spawnObject(-1, cv::Scalar(0, 0, 255), Shape::CIRCLE);
     } else {
-        spawnObject(1, cv::Scalar(0, 255, 0), Shape::square);
+        spawnObject(1, cv::Scalar(0, 255, 0), Shape::SQUARE);
     }
 
     m_objectsSpawned++;
@@ -54,8 +54,3 @@ bool CatchMode::isGameOver() const
     return m_objectsSpawned >= m_totalObjects && m_objects.empty();
 }
 
-void CatchMode::draw(cv::Mat& frame)
-{
-    // Zeichnet alle Objekte (wird von GameMode::draw() gehandelt)
-    GameMode::draw(frame);
-}

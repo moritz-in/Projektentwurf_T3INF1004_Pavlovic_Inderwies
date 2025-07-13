@@ -1,16 +1,17 @@
 //
-// Created by Stefan Pavlovic on 02.07.25.
+// Created by Stefan Pavlovic on 13.07.25.
 //
 
-#ifndef SQUARE_H
-#define SQUARE_H
+#ifndef CIRCLE_H
+#define CIRCLE_H
+
 #include "Objects.h"
 
-
-class Square : public Objects {
+class Circle : public Objects {
 public:
-    Square(cv::Point position, cv::Size size, cv::Scalar color, int speed);
+    Circle(cv::Point position, cv::Size size, cv::Scalar color, int speed);
 
+    // Interface implementations
     cv::Rect getRect() const override;
     cv::Scalar getColor() const override;
     Shape getType() const override;
@@ -19,6 +20,8 @@ public:
     void update() override;
     void markForRemoval() override;
     bool shouldBeRemoved() const override;
+
+    // Originalmethoden
     void draw(cv::Mat& frame) const override;
 
 private:
@@ -26,9 +29,7 @@ private:
     cv::Scalar m_color;
     int m_speed;
     bool m_markedForRemoval = false;
-    cv::Mat m_frame; // Referenz auf den aktuellen Frame
+    cv::Mat m_frame;
 };
 
-
-
-#endif //SQUARE_H
+#endif // CIRCLE_H
