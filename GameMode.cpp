@@ -10,22 +10,15 @@
 GameMode::GameMode(std::shared_ptr<Player> player, int frameWidth, int frameHeight) : m_player(player), m_frameWidth(frameWidth), m_frameHeight(frameHeight){}
 
 // erstellt ein neues Objekt
-void GameMode::spawnObject(int type, const cv::Scalar& color, Shape shape){
-    static bool seeded = false;
-    if (!seeded) {
-        srand(static_cast<unsigned>(time(nullptr)));
-        seeded = true;
-    }
-    // TODO bessere Randomfunktion suchen
-// größe, geschwindigkeit und position werden zufällig bestimmt
-    int size = 20 + rand() % 21;
-    int x = rand() % m_frameWidth;
-    int speed = 3 + rand() % 4;
-//erstellte objekte in dem Vektor speichern
-    if (type == Shape::SQUARE) {
-        m_objects.push_back(std::make_shared<Square>(pos, size, speed, color));
-    } else if (type == Shape::CIRCLE) {
-        m_objects.push_back(std::make_shared<Circle>(pos, size, speed, color));
+void GameMode::spawnObject(int speed, const cv::Scalar& color, Shape shape){
+    int size = 40; // Feste Größe für bessere Sichtbarkeit
+    int x = rand() % (m_frameWidth - size);
+    cv::Point pos(x, -size); // Startet oberhalb des Bildschirms
+
+    if (shape == Shape::SQUARE) {
+        m_objects.push_back(std::make_shared<Square>(pos, cv::Size(size, size), color, speed));
+    } else {
+        m_objects.push_back(std::make_shared<Circle>(pos, cv::Size(size, size), color, speed));
     }
 }
 

@@ -13,6 +13,7 @@ public:
     void handleCollision(Objects* object) override;
     void spawnRandomBall();
     void handleObjectPassed();
+    const std::vector<std::shared_ptr<Objects>>& getObjects() const override;
 
 private:
     bool m_gameOver = false;

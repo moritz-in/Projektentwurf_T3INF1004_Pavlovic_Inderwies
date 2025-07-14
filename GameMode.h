@@ -16,7 +16,6 @@ public:
     virtual void update(const cv::Rect& faceRect, cv::Mat& frame) = 0;    //wird in den Kinderklassen überschrieben
     virtual bool isGameOver() const = 0;      //wird in den Kinderklassen überschrieben
     virtual const std::vector<std::shared_ptr<Objects>>& getObjects() const = 0;
-
 protected:
     std::shared_ptr<Player> m_player;
     int m_frameWidth;
@@ -25,7 +24,6 @@ protected:
 
     void spawnObject(int type, const cv::Scalar& color, Shape shape);
     void updateObjects();
-    // TODO Collisionen bei Objektklasse checken
     virtual void handleCollision(Objects* obj) = 0;
     void checkCollisions(const cv::Rect& faceRect);
     void removeOffscreenObjects();

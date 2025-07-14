@@ -35,6 +35,10 @@ void DodgeMode::handleObjectPassed() {
     m_player->addScore(1);
 }
 
+const std::vector<std::shared_ptr<Objects>> & DodgeMode::getObjects() const {
+    return m_objects;
+}
+
 void DodgeMode::update(const cv::Rect& faceRect, cv::Mat& frame) {
     // Neue Bälle alle 1.5-3 sekunden
     unsigned int currentTime = cv::getTickCount() / cv::getTickFrequency();

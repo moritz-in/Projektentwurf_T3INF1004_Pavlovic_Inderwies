@@ -25,7 +25,13 @@ add_executable(Projektentwurf_T3INF1004_Pavlovic_Inderwies
         DodgeMode.h
         DodgeMode.cpp
         Gui.h
+        Gui.cpp
+        Square.h
         Square.cpp
+        Circle.h
+        Circle.cpp
+        Camera.h
+        Camera.cpp
 )
 
 target_link_libraries(Projektentwurf_T3INF1004_Pavlovic_Inderwies ${OpenCV_LIBS})

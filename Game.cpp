@@ -1,6 +1,7 @@
 #include "Game.h"
 #include <iostream>
 
+
 Game::Game(const std::string& cascadePath) : m_camera() {
     if (!m_faceCascade.load(cascadePath)) {
         std::cerr << "Fehler: Datei konnte nicht geladen werden." << std::endl;
@@ -80,12 +81,12 @@ void Game::processFrame(cv::Mat &frame) {
         m_currentMode->update(faces[0], frame);
     }
 
+    // Score immer anzeigen (über Gui)
+    m_gui.drawFrame(frame);
     m_gui.drawObjects(m_currentMode->getObjects());
-
-    std::string scoreText = "Score: " + std::to_string(m_player->getScore());
-    m_gui.drawText(scoreText, 10, 30);
+    m_gui.drawText("Score: " + std::to_string(m_player->getScore()), 10, 30);
+    m_gui.showFrame();
 }
-
 
 void Game::run() {
     if (!initialize()) return;
@@ -102,28 +103,28 @@ void Game::run() {
 
         if (m_currentMode->isGameOver()) {
             endGame();
-            cv::waitKey(3000);
+            cv::waitKey(500);
             break;
         }
     }
 }
 
 void Game::endGame() {
-    std::cout << "\nGame Over!\n";
-    std::cout << "Your score " << m_player->getName() << ": " << m_player->getScore() << std::endl;
-
     cv::Mat frame;
-    if (m_camera.readFrame(frame) && !frame.empty()) {
+    while (true) {
+        frame = m_camera.captureFrame();
+        if (frame.empty()) break;
+
         cv::flip(frame, frame, 1);
-        m_gui.drawText("Game Over", cv::Point(frame.cols/4, frame.rows/2),
-                      cv::Scalar(0, 0, 255), 1.5, 3, frame);
-        m_gui.drawText("Score: " + std::to_string(m_player->getScore()),
-                      cv::Point(frame.cols/4, frame.rows/2 + 50),
-                      cv::Scalar(255, 255, 255), 1, 2, frame);
-        m_gui.drawText("Player: " + m_player->getName(),
-                      cv::Point(frame.cols/4, frame.rows/2 + 100),
-                      cv::Scalar(255, 255, 255), 1, 2, frame);
-        cv::imshow(m_windowName, frame);
-        cv::waitKey(3000);
+        m_gui.drawFrame(frame);
+
+        // Score und Game Over anzeigen
+        m_gui.drawText("GAME OVER", frame.cols / 2 - 100, frame.rows / 2 - 40);
+        m_gui.drawText("Score: " + std::to_string(m_player->getScore()), frame.cols / 2 - 100, frame.rows / 2);
+        m_gui.drawText("Player: " + m_player->getName(), frame.cols / 2 - 100, frame.rows / 2 + 40);
+
+        m_gui.showFrame();
+
+        if (m_gui.isEscapePressed() == true) break; // ESC zum Beenden
     }
 }

@@ -14,6 +14,7 @@ public:
     bool isGameOver() const override;
     void handleCollision(Objects* object) override;
     void spawnNextObject();
+    const std::vector<std::shared_ptr<Objects>>& getObjects() const override;
 
 private:
     int m_totalObjects;
