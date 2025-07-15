@@ -12,26 +12,25 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 
 add_executable(Projektentwurf_T3INF1004_Pavlovic_Inderwies
         main.cpp
-        Game.cpp
-        Game.h
-        Player.h
-        Player.cpp
-        Objects.h
-        Objects.cpp
-        GameMode.h
-        GameMode.cpp
-        CatchMode.h
-        CatchMode.cpp
-        DodgeMode.h
-        DodgeMode.cpp
-        Gui.h
-        Gui.cpp
-        Square.h
-        Square.cpp
-        Circle.h
-        Circle.cpp
-        Camera.h
-        Camera.cpp
+        src/Game.cpp
+        include/Game.h
+        include/Player.h
+        src/Player.cpp
+        include/Objects.h
+        include/GameMode.h
+        src/GameMode.cpp
+        include/CatchMode.h
+        src/CatchMode.cpp
+        include/DodgeMode.h
+        src/DodgeMode.cpp
+        include/Gui.h
+        src/Gui.cpp
+        include/Square.h
+        src/Square.cpp
+        include/Circle.h
+        src/Circle.cpp
+        include/Camera.h
+        src/Camera.cpp
 )
 
 target_link_libraries(Projektentwurf_T3INF1004_Pavlovic_Inderwies ${OpenCV_LIBS})
