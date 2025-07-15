@@ -34,10 +34,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.30.5/CMakeCCompiler.cmake"
   "CMakeFiles/3.30.5/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.30.5/CMakeSystem.cmake"
-  "/opt/homebrew/opt/opencv/lib/cmake/opencv4/OpenCVConfig-version.cmake"
-  "/opt/homebrew/opt/opencv/lib/cmake/opencv4/OpenCVConfig.cmake"
-  "/opt/homebrew/opt/opencv/lib/cmake/opencv4/OpenCVModules-release.cmake"
-  "/opt/homebrew/opt/opencv/lib/cmake/opencv4/OpenCVModules.cmake"
+  "/opt/homebrew/lib/cmake/opencv4/OpenCVConfig-version.cmake"
+  "/opt/homebrew/lib/cmake/opencv4/OpenCVConfig.cmake"
+  "/opt/homebrew/lib/cmake/opencv4/OpenCVModules-release.cmake"
+  "/opt/homebrew/lib/cmake/opencv4/OpenCVModules.cmake"
   )
 
 # The corresponding makefile is:

@@ -12,9 +12,9 @@ public:
 
     void update(const cv::Rect& faceRect, cv::Mat& frame) override;
     bool isGameOver() const override;
-    void handleCollision(Objects* object) override;
+    void handleCollision(std::shared_ptr<Object> object) override;
     void spawnNextObject();
-    const std::vector<std::shared_ptr<Objects>>& getObjects() const override;
+    const std::vector<std::shared_ptr<Object>>& getObjects() const override;
 
 private:
     int m_totalObjects;

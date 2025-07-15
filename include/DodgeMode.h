@@ -9,15 +9,15 @@ public:
     DodgeMode(std::shared_ptr<Player> player, int width, int height);
 
     void update(const cv::Rect& faceRect, cv::Mat& frame) override;
-    bool isGameOver() const override { return m_gameOver; }
-    void handleCollision(Objects* object) override;
+    bool isGameOver() const override;
+    void handleCollision(std::shared_ptr<Object> object) override;
     void spawnRandomBall();
     void handleObjectPassed();
-    const std::vector<std::shared_ptr<Objects>>& getObjects() const override;
+    const std::vector<std::shared_ptr<Object>>& getObjects() const override;
 
 private:
     bool m_gameOver = false;
-    double m_lastSpawnTime = 0;
+    int m_lastSpawnTime = 0;
     double m_spawnDelay = 2.0; // Standardverzögerung in Sekunden
     std::uniform_int_distribution<int> m_spawnDelayDist{1000, 3000}; // 1-3 Sekunden
 

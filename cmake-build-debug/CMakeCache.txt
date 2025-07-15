@@ -213,6 +213,9 @@ CMAKE_TAPI:FILEPATH=/Library/Developer/CommandLineTools/usr/bin/tapi
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//The directory containing a CMake configuration file for OpenCV.
+OpenCV_DIR:PATH=/opt/homebrew/lib/cmake/opencv4
+
 //Value Computed by CMake
 Projektentwurf_T3INF1004_Pavlovic_Inderwies_BINARY_DIR:STATIC=/Users/stefanpavlovic/Library/Mobile Documents/com~apple~CloudDocs/DHBW/2. Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/cmake-build-debug
 

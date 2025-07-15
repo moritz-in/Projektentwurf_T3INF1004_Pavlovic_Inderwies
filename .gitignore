@@ -1,0 +1,13 @@
+#ignore
+*
+
+#dont ignore
+!CMakeLists.txt
+!test/CMakeLists.txt
+!.gitignore
+!LICENSE
+!README.md
+!*.cpp
+!*.h
+!*.hpp
+!*.drawio

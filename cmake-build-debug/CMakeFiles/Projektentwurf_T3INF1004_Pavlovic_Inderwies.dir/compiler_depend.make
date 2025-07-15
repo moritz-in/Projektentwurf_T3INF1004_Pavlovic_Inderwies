@@ -819,8 +819,9 @@ CMakeFiles/Projektentwurf_T3INF1004_Pavlovic_Inderwies.dir/main.cpp.o: /Users/st
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Game.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/GameMode.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Gui.h \
-  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Objects.h \
+  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Object.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Player.h \
+  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Shape.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Square.h \
   /opt/homebrew/Cellar/opencv/4.11.0_1/include/opencv4/opencv2/imgproc/segmentation.hpp \
   /opt/homebrew/Cellar/opencv/4.11.0_1/include/opencv4/opencv2/calib3d.hpp \
@@ -2259,10 +2260,57 @@ CMakeFiles/Projektentwurf_T3INF1004_Pavlovic_Inderwies.dir/src/CatchMode.cpp.o: 
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__mutex/tag_types.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__mutex/unique_lock.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__node_handle \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__numeric/accumulate.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__numeric/adjacent_difference.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__numeric/exclusive_scan.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__numeric/gcd_lcm.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__numeric/inclusive_scan.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__numeric/inner_product.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__numeric/iota.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__numeric/partial_sum.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__numeric/pstl.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__numeric/reduce.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__numeric/transform_exclusive_scan.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__numeric/transform_inclusive_scan.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__numeric/transform_reduce.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__ostream/basic_ostream.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/bernoulli_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/binomial_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/cauchy_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/chi_squared_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/clamp_to_integral.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/default_random_engine.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/discard_block_engine.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/discrete_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/exponential_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/extreme_value_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/fisher_f_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/gamma_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/generate_canonical.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/geometric_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/independent_bits_engine.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/is_seed_sequence.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/is_valid.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/knuth_b.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/linear_congruential_engine.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/log2.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/lognormal_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/mersenne_twister_engine.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/negative_binomial_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/normal_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/piecewise_constant_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/piecewise_linear_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/poisson_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/random_device.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/ranlux.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/seed_seq.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/shuffle_order_engine.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/student_t_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/subtract_with_carry_engine.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/uniform_int_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/uniform_random_bit_generator.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/uniform_real_distribution.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__random/weibull_distribution.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__ranges/access.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__ranges/concepts.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__ranges/container_compatible_range.h \
@@ -2350,6 +2398,7 @@ CMakeFiles/Projektentwurf_T3INF1004_Pavlovic_Inderwies.dir/src/CatchMode.cpp.o: 
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_empty.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_enum.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_equality_comparable.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_execution_policy.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_final.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_floating_point.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_function.h \
@@ -2469,6 +2518,7 @@ CMakeFiles/Projektentwurf_T3INF1004_Pavlovic_Inderwies.dir/src/CatchMode.cpp.o: 
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/deque \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/errno.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/exception \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/execution \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/float.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/format \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/forward_list \
@@ -2489,10 +2539,12 @@ CMakeFiles/Projektentwurf_T3INF1004_Pavlovic_Inderwies.dir/src/CatchMode.cpp.o: 
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/memory \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/mutex \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/new \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/numeric \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/optional \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/ostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/print \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/queue \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/random \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/ratio \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/set \
   /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/sstream \
@@ -2673,8 +2725,9 @@ CMakeFiles/Projektentwurf_T3INF1004_Pavlovic_Inderwies.dir/src/CatchMode.cpp.o: 
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/CatchMode.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/GameMode.h \
-  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Objects.h \
+  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Object.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Player.h \
+  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Shape.h \
   /opt/homebrew/Cellar/opencv/4.11.0_1/include/opencv4/opencv2/imgproc/segmentation.hpp \
   /opt/homebrew/Cellar/opencv/4.11.0_1/include/opencv4/opencv2/calib3d.hpp \
   /opt/homebrew/Cellar/opencv/4.11.0_1/include/opencv4/opencv2/core.hpp \
@@ -3600,7 +3653,10 @@ CMakeFiles/Projektentwurf_T3INF1004_Pavlovic_Inderwies.dir/src/Circle.cpp.o: /Us
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Circle.h \
-  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Objects.h \
+  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Gui.h \
+  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Object.h \
+  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Shape.h \
+  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Square.h \
   /opt/homebrew/Cellar/opencv/4.11.0_1/include/opencv4/opencv2/imgproc/segmentation.hpp \
   /opt/homebrew/Cellar/opencv/4.11.0_1/include/opencv4/opencv2/calib3d.hpp \
   /opt/homebrew/Cellar/opencv/4.11.0_1/include/opencv4/opencv2/core.hpp \
@@ -4578,8 +4634,9 @@ CMakeFiles/Projektentwurf_T3INF1004_Pavlovic_Inderwies.dir/src/DodgeMode.cpp.o: 
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/DodgeMode.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/GameMode.h \
-  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Objects.h \
+  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Object.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Player.h \
+  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Shape.h \
   /opt/homebrew/Cellar/opencv/4.11.0_1/include/opencv4/opencv2/imgproc/segmentation.hpp \
   /opt/homebrew/Cellar/opencv/4.11.0_1/include/opencv4/opencv2/calib3d.hpp \
   /opt/homebrew/Cellar/opencv/4.11.0_1/include/opencv4/opencv2/core.hpp \
@@ -5511,8 +5568,9 @@ CMakeFiles/Projektentwurf_T3INF1004_Pavlovic_Inderwies.dir/src/Game.cpp.o: /User
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Game.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/GameMode.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Gui.h \
-  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Objects.h \
+  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Object.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Player.h \
+  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Shape.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Square.h \
   /opt/homebrew/Cellar/opencv/4.11.0_1/include/opencv4/opencv2/imgproc/segmentation.hpp \
   /opt/homebrew/Cellar/opencv/4.11.0_1/include/opencv4/opencv2/calib3d.hpp \
@@ -6440,8 +6498,9 @@ CMakeFiles/Projektentwurf_T3INF1004_Pavlovic_Inderwies.dir/src/GameMode.cpp.o: /
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Circle.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/GameMode.h \
-  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Objects.h \
+  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Object.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Player.h \
+  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Shape.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Square.h \
   /opt/homebrew/Cellar/opencv/4.11.0_1/include/opencv4/opencv2/imgproc/segmentation.hpp \
   /opt/homebrew/Cellar/opencv/4.11.0_1/include/opencv4/opencv2/calib3d.hpp \
@@ -7369,7 +7428,8 @@ CMakeFiles/Projektentwurf_T3INF1004_Pavlovic_Inderwies.dir/src/Gui.cpp.o: /Users
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Circle.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Gui.h \
-  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Objects.h \
+  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Object.h \
+  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Shape.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Square.h \
   /opt/homebrew/Cellar/opencv/4.11.0_1/include/opencv4/opencv2/imgproc/segmentation.hpp \
   /opt/homebrew/Cellar/opencv/4.11.0_1/include/opencv4/opencv2/calib3d.hpp \
@@ -8295,8 +8355,9 @@ CMakeFiles/Projektentwurf_T3INF1004_Pavlovic_Inderwies.dir/src/Player.cpp.o: /Us
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdarg.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h \
-  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Objects.h \
+  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Object.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Player.h \
+  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Shape.h \
   /opt/homebrew/Cellar/opencv/4.11.0_1/include/opencv4/opencv2/imgproc/segmentation.hpp \
   /opt/homebrew/Cellar/opencv/4.11.0_1/include/opencv4/opencv2/calib3d.hpp \
   /opt/homebrew/Cellar/opencv/4.11.0_1/include/opencv4/opencv2/core.hpp \
@@ -9221,7 +9282,8 @@ CMakeFiles/Projektentwurf_T3INF1004_Pavlovic_Inderwies.dir/src/Square.cpp.o: /Us
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdarg.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h \
-  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Objects.h \
+  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Object.h \
+  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Shape.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Square.h \
   /opt/homebrew/Cellar/opencv/4.11.0_1/include/opencv4/opencv2/imgproc/segmentation.hpp \
   /opt/homebrew/Cellar/opencv/4.11.0_1/include/opencv4/opencv2/calib3d.hpp \
@@ -9339,6 +9401,10 @@ CMakeFiles/Projektentwurf_T3INF1004_Pavlovic_Inderwies.dir/src/Square.cpp.o: /Us
 
 /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/DodgeMode.h:
 
+/Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/src/Circle.cpp:
+
+/Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/CatchMode.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/random:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/numeric:
@@ -9404,10 +9470,6 @@ CMakeFiles/Projektentwurf_T3INF1004_Pavlovic_Inderwies.dir/src/Square.cpp.o: /Us
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__numeric/exclusive_scan.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__numeric/accumulate.h:
-
-/Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/src/Circle.cpp:
-
-/Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/CatchMode.h:
 
 /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/src/Camera.cpp:
 
@@ -9534,6 +9596,8 @@ CMakeFiles/Projektentwurf_T3INF1004_Pavlovic_Inderwies.dir/src/Square.cpp.o: /Us
 /opt/homebrew/Cellar/opencv/4.11.0_1/include/opencv4/opencv2/imgproc/segmentation.hpp:
 
 /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Player.h:
+
+/Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Object.h:
 
 /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Gui.h:
 
@@ -9828,8 +9892,6 @@ CMakeFiles/Projektentwurf_T3INF1004_Pavlovic_Inderwies.dir/src/Square.cpp.o: /Us
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__utility/exception_guard.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/print:
-
-/Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Objects.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/ostream:
 
@@ -10312,6 +10374,8 @@ CMakeFiles/Projektentwurf_T3INF1004_Pavlovic_Inderwies.dir/src/Square.cpp.o: /Us
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/arm/types.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__type_traits/is_scalar.h:
+
+/Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Shape.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/usr/include/c++/v1/__algorithm/ranges_iterator_concept.h:
 

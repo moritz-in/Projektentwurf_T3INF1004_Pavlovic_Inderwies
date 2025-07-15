@@ -121,6 +121,7 @@ void Game::endGame() {
         m_gui.drawFrame(frame);
 
         // Score und Game Over anzeigen
+        // TODO Konstanten
         m_gui.drawText("GAME OVER", frame.cols / 2 - 100, frame.rows / 2 - 40);
         m_gui.drawText("Score: " + std::to_string(m_player->getScore()), frame.cols / 2 - 100, frame.rows / 2);
         m_gui.drawText("Player: " + m_player->getName(), frame.cols / 2 - 100, frame.rows / 2 + 40);

@@ -11,7 +11,7 @@ void Gui::drawFrame(cv::Mat mat) {
     currentFrame = mat;
 }
 
-void Gui::drawObjects(std::vector<std::shared_ptr<Objects>> objects) {
+void Gui::drawObjects(std::vector<std::shared_ptr<Object>> objects) {
     for (auto object: objects) {
         switch (object->getType()) {
             case Shape::SQUARE: {

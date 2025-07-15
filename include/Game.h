@@ -23,6 +23,7 @@ public:
 private:
     Camera m_camera;
     cv::CascadeClassifier m_faceCascade;
+    // TODO Konstante
     const std::string m_windowName = "Face Game";
 
     std::unique_ptr<GameMode> m_currentMode;

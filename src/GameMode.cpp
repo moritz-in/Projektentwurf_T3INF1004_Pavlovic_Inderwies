@@ -40,7 +40,7 @@ void GameMode::checkCollisions(const cv::Rect& faceRect) {
         }
 
         if ((faceRect & object->getRect()).area() > 0) {
-            handleCollision(object.get());
+            handleCollision(object);
         }
     }
 }
@@ -48,7 +48,7 @@ void GameMode::checkCollisions(const cv::Rect& faceRect) {
 void GameMode::removeOffscreenObjects() {
     m_objects.erase(
         std::remove_if(m_objects.begin(), m_objects.end(),
-            [](const std::shared_ptr<Objects>& obj) {
+            [](const std::shared_ptr<Object>& obj) {
                 return obj->shouldBeRemoved();
             }),
         m_objects.end()

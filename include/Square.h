@@ -4,10 +4,10 @@
 
 #ifndef SQUARE_H
 #define SQUARE_H
-#include "Objects.h"
+#include "Object.h"
 
 
-class Square : public Objects {
+class Square : public Object {
 public:
     Square(cv::Point position, cv::Size size, cv::Scalar color, int speed);
 

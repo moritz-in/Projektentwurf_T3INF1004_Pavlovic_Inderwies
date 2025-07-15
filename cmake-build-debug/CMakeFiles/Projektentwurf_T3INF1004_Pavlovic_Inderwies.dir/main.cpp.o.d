@@ -925,7 +925,8 @@ CMakeFiles/Projektentwurf_T3INF1004_Pavlovic_Inderwies.dir/main.cpp.o: \
   /opt/homebrew/Cellar/opencv/4.11.0_1/include/opencv4/opencv2/video/background_segm.hpp \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/GameMode.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Player.h \
-  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Objects.h \
+  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Object.h \
+  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Shape.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Gui.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Circle.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Square.h \

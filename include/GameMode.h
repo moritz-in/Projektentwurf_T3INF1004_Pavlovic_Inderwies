@@ -4,7 +4,7 @@
 #ifndef GAMEMODE_H
 #define GAMEMODE_H
 #include "Player.h"
-#include "Objects.h"
+#include "Object.h"
 
 
 
@@ -15,19 +15,18 @@ public:
 
     virtual void update(const cv::Rect& faceRect, cv::Mat& frame) = 0;    //wird in den Kinderklassen überschrieben
     virtual bool isGameOver() const = 0;      //wird in den Kinderklassen überschrieben
-    virtual const std::vector<std::shared_ptr<Objects>>& getObjects() const = 0;
+    virtual const std::vector<std::shared_ptr<Object>>& getObjects() const = 0;
 protected:
     std::shared_ptr<Player> m_player;
     int m_frameWidth;
     int m_frameHeight;
-    std::vector<std::shared_ptr<Objects>> m_objects;
+    std::vector<std::shared_ptr<Object>> m_objects;
 
     void spawnObject(int type, const cv::Scalar& color, Shape shape);
     void updateObjects();
-    virtual void handleCollision(Objects* obj) = 0;
+    virtual void handleCollision(std::shared_ptr<Object> obj) = 0;
     void checkCollisions(const cv::Rect& faceRect);
     void removeOffscreenObjects();
-
 
 };
 

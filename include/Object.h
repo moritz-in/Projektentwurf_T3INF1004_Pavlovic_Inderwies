@@ -2,20 +2,18 @@
 // Created by Stefan Pavlovic on 26.06.25.
 //
 
-#ifndef OBJECTS_H
-#define OBJECTS_H
+#ifndef OBJECT_H
+#define OBJECT_H
 #include <opencv2/opencv.hpp>
 
-enum class Shape{
-   SQUARE,
-   CIRCLE
-};
+#include "Shape.h"
+
 
 //Objects Klasse als Interface implemetiert
 
-class Objects {
+class Object {
 public:
-   virtual ~Objects() = default;
+   virtual ~Object() = default;
 
    virtual cv::Rect getRect() const = 0;
    virtual cv::Scalar getColor() const = 0;
@@ -30,4 +28,4 @@ public:
 
 
 
-#endif //OBJECTS_H
+#endif //OBJECT_H

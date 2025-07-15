@@ -11,12 +11,12 @@ void DodgeMode::spawnRandomBall() {
     unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
     std::default_random_engine generator(seed);
     std::uniform_int_distribution<int> colorDist(0, 2);
-    std::uniform_int_distribution<int> spawnDelayDist(1000, 3000); // 1-3 Sekunden zwischen Spawns
 
     int colorChoice = colorDist(generator);
     cv::Scalar color;
 
     switch (colorChoice) {
+        // TODO Konstanten
         case 0: color = cv::Scalar(0, 0, 255); break; // Rot
         case 1: color = cv::Scalar(0, 255, 0); break; // Grün
         case 2: color = cv::Scalar(255, 0, 0); break; // Blau
@@ -26,7 +26,7 @@ void DodgeMode::spawnRandomBall() {
 }
 
 //Wenn objekt getroffen --> Spiel zuende
-void DodgeMode::handleCollision(Objects* obj) {
+void DodgeMode::handleCollision(std::shared_ptr<Object> obj) {
     m_gameOver = true;
 }
 
@@ -35,16 +35,16 @@ void DodgeMode::handleObjectPassed() {
     m_player->addScore(1);
 }
 
-const std::vector<std::shared_ptr<Objects>> & DodgeMode::getObjects() const {
+const std::vector<std::shared_ptr<Object>> & DodgeMode::getObjects() const {
     return m_objects;
 }
 
 void DodgeMode::update(const cv::Rect& faceRect, cv::Mat& frame) {
     // Neue Bälle alle 1.5-3 sekunden
-    unsigned int currentTime = cv::getTickCount() / cv::getTickFrequency();
+    double currentTime = static_cast<double>(cv::getTickCount()) / cv::getTickFrequency();
     if (currentTime - m_lastSpawnTime >= m_spawnDelay) {
         spawnRandomBall();
-        m_lastSpawnTime = currentTime;
+        m_lastSpawnTime = static_cast<int>(std::round(currentTime));
         // Neue Verzögerung für nächsten Spawn setzen
         unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
         std::default_random_engine generator(seed);
@@ -67,4 +67,8 @@ void DodgeMode::update(const cv::Rect& faceRect, cv::Mat& frame) {
 
     // Zum Schluss Objekte entfernen
     removeOffscreenObjects();
+}
+
+bool DodgeMode::isGameOver() const {
+    return m_gameOver;
 }

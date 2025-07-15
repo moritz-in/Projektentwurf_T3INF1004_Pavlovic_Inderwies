@@ -1,6 +1,6 @@
 #include "../include/Player.h"
 
-#include "../include/Objects.h"
+#include "../include/Object.h"
 
 //Konstruktor mit namensübergabe
 Player::Player(const std::string& name) : m_name(name) {

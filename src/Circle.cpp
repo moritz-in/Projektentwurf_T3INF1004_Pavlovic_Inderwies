@@ -4,6 +4,8 @@
 
 #include "../include/Circle.h"
 
+#include "../include/Gui.h"
+
 Circle::Circle(cv::Point position, cv::Size size, cv::Scalar color, int speed)
     : m_rect(position, size), m_color(color), m_speed(speed) {}
 
