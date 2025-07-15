@@ -1,15 +1,35 @@
-#ignore
-*
+# Prerequisites
+*.d
 
-#dont ignore
-!CMakeLists.txt
-!test/CMakeLists.txt
-!.gitignore
-!LICENSE
-!README.md
-!*.cpp
-!*.h
-!*.hpp
-!*.drawio
-/cmake-build-debug/
-/build/
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+.idea
+

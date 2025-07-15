@@ -816,6 +816,7 @@ CMakeFiles/Projektentwurf_T3INF1004_Pavlovic_Inderwies.dir/main.cpp.o: /Users/st
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Camera.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Circle.h \
+  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Constants.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Game.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/GameMode.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Gui.h \
@@ -2724,6 +2725,7 @@ CMakeFiles/Projektentwurf_T3INF1004_Pavlovic_Inderwies.dir/src/CatchMode.cpp.o: 
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/CatchMode.h \
+  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Constants.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/GameMode.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Object.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Player.h \
@@ -4632,6 +4634,7 @@ CMakeFiles/Projektentwurf_T3INF1004_Pavlovic_Inderwies.dir/src/DodgeMode.cpp.o: 
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdarg.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h \
+  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Constants.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/DodgeMode.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/GameMode.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Object.h \
@@ -5564,6 +5567,7 @@ CMakeFiles/Projektentwurf_T3INF1004_Pavlovic_Inderwies.dir/src/Game.cpp.o: /User
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Camera.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/CatchMode.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Circle.h \
+  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Constants.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/DodgeMode.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Game.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/GameMode.h \
@@ -7427,6 +7431,7 @@ CMakeFiles/Projektentwurf_T3INF1004_Pavlovic_Inderwies.dir/src/Gui.cpp.o: /Users
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Circle.h \
+  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Constants.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Gui.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Object.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Shape.h \
@@ -9604,6 +9609,8 @@ CMakeFiles/Projektentwurf_T3INF1004_Pavlovic_Inderwies.dir/src/Square.cpp.o: /Us
 /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/GameMode.h:
 
 /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Game.h:
+
+/Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Constants.h:
 
 /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Circle.h:
 
