@@ -1,9 +1,8 @@
 #ifndef DODGEMODE_H
 #define DODGEMODE_H
-
 #include "GameMode.h"
 
-//Klasse erbt von GameMode
+
 class DodgeMode : public GameMode {
 public:
     DodgeMode(std::shared_ptr<Player> player, int width, int height);

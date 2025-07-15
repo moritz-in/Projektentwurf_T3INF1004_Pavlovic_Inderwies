@@ -1,7 +1,3 @@
-//
-// Created by Stefan Pavlovic on 02.07.25.
-//
-
 #ifndef SQUARE_H
 #define SQUARE_H
 #include "Object.h"
@@ -26,7 +22,7 @@ private:
     cv::Scalar m_color;
     int m_speed;
     bool m_markedForRemoval = false;
-    cv::Mat m_frame; // Referenz auf den aktuellen Frame
+    cv::Mat m_frame;
 };
 
 

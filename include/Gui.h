@@ -1,13 +1,10 @@
-//
-// Created by Stefan Pavlovic on 02.07.25.
-//
-
 #ifndef GUI_H
 #define GUI_H
 #include <vector>
 #include "Object.h"
 #include "Circle.h"
 #include "Square.h"
+
 
 class Gui {
 public:
@@ -19,6 +16,9 @@ public:
     void drawText(std::string text, int x, int y);
     void showFrame();
     bool isEscapePressed();
+
+protected:
+    cv::Mat currentFrame;
 };
 
 #endif //GUI_H

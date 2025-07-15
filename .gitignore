@@ -11,3 +11,5 @@
 !*.h
 !*.hpp
 !*.drawio
+/cmake-build-debug/
+/build/

@@ -1,13 +1,7 @@
-//
-// Created by Stefan Pavlovic on 26.06.25.
-//
-
 #ifndef OBJECT_H
 #define OBJECT_H
 #include <opencv2/opencv.hpp>
-
 #include "Shape.h"
-
 
 //Objects Klasse als Interface implemetiert
 

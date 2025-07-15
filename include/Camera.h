@@ -1,10 +1,5 @@
-//
-// Created by Stefan Pavlovic on 13.07.25.
-//
-
 #ifndef CAMERA_H
 #define CAMERA_H
-
 #include <opencv2/opencv.hpp>
 #include <stdexcept>
 
