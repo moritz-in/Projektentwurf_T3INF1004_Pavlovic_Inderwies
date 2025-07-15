@@ -31,7 +31,6 @@ add_executable(Projektentwurf_T3INF1004_Pavlovic_Inderwies
         include/Camera.h
         src/Camera.cpp
         include/Shape.h
-        include/Constants.h
 )
 
 target_link_libraries(Projektentwurf_T3INF1004_Pavlovic_Inderwies ${OpenCV_LIBS})
