@@ -19,12 +19,12 @@ Game::~Game() {
 bool Game::initialize() {
 
     if (m_faceCascade.empty()) {
-        std::cerr << "Error: Face detection not loaded." << std::endl;
+        std::cerr << "Gesichtserkennung konnte nicht geladen werden" << std::endl;
         return false;
     }
 
     if (!m_camera.isOpen()) {
-        std::cerr << "Error: Camera not opened." << std::endl;
+        std::cerr << "Kamera konnte nicht geöffnet werden" << std::endl;
         return false;
     }
 
@@ -46,7 +46,7 @@ void Game::displayMenu() {
         std::cout << "\nSpielmodus auswählen:\n";
         std::cout << "1. Ausweichen\n";
         std::cout << "2. Einfangen\n";
-        std::cout << "Deine Wahl: ";   // kurze Anleitung wie Modus funktioniert (Erweiterung später)
+        std::cout << "Deine Wahl: ";
 
         if (!(std::cin >> choice)) {
             std::cin.clear();
@@ -83,10 +83,10 @@ void Game::processFrame(cv::Mat &frame) {
         m_currentMode->update(faces[0], frame);
     }
 
-    // Score immer anzeigen (über Gui)
+    // Punktzahl immer anzeigen (über Gui)
     m_gui.drawFrame(frame);
     m_gui.drawObjects(m_currentMode->getObjects());
-    m_gui.drawText("Score: " + std::to_string(m_player->getScore()), 10, 30);
+    m_gui.drawText(Constants::Score + std::to_string(m_player->getScore()), 10, 30);
     m_gui.showFrame();
 }
 
@@ -116,15 +116,12 @@ void Game::endGame() {
     while (true) {
         frame = m_camera.captureFrame();
         if (frame.empty()) break;
-
         cv::flip(frame, frame, 1);
-        m_gui.drawFrame(frame);
 
-        // Score und Game Over anzeigen
-        // TODO Konstanten
-        m_gui.drawText("GAME OVER", frame.cols / 2 - 100, frame.rows / 2 - 40);
-        m_gui.drawText("Score: " + std::to_string(m_player->getScore()), frame.cols / 2 - 100, frame.rows / 2);
-        m_gui.drawText("Player: " + m_player->getName(), frame.cols / 2 - 100, frame.rows / 2 + 40);
+        m_gui.drawFrame(frame);
+        m_gui.drawText(Constants::GameOver, frame.cols / 2 - 100, frame.rows / 2 - 40);
+        m_gui.drawText(Constants::Score + std::to_string(m_player->getScore()), frame.cols / 2 - 100, frame.rows / 2);
+        m_gui.drawText(Constants::Player + m_player->getName(), frame.cols / 2 - 100, frame.rows / 2 + 40);
 
         m_gui.showFrame();
 

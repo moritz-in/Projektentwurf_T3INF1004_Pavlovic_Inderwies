@@ -1,11 +1,7 @@
-//
-// Created by Stefan Pavlovic on 13.07.25.
-//
-
 #ifndef CIRCLE_H
 #define CIRCLE_H
-
 #include "Object.h"
+
 
 class Circle : public Object {
 public:

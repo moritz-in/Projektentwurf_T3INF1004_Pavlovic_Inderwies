@@ -1,7 +1,3 @@
-//
-// Created by Stefan Pavlovic on 15.07.25.
-//
-
 #ifndef SHAPETYPE_H
 #define SHAPETYPE_H
 

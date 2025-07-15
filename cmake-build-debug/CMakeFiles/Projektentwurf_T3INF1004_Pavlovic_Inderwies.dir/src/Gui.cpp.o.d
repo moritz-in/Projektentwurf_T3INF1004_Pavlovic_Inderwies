@@ -926,4 +926,5 @@ CMakeFiles/Projektentwurf_T3INF1004_Pavlovic_Inderwies.dir/src/Gui.cpp.o: \
   /opt/homebrew/Cellar/opencv/4.11.0_1/include/opencv4/opencv2/video/background_segm.hpp \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/src/../include/Shape.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/src/../include/Circle.h \
-  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/src/../include/Square.h
+  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/src/../include/Square.h \
+  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/src/../include/Constants.h

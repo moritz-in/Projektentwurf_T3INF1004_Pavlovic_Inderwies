@@ -930,4 +930,5 @@ CMakeFiles/Projektentwurf_T3INF1004_Pavlovic_Inderwies.dir/main.cpp.o: \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Gui.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Circle.h \
   /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Square.h \
-  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Camera.h
+  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Camera.h \
+  /Users/stefanpavlovic/Library/Mobile\ Documents/com~apple~CloudDocs/DHBW/2.\ Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/include/Constants.h
