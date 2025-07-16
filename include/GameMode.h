@@ -13,6 +13,9 @@ public:
     virtual bool isGameOver() const = 0;
     virtual const std::vector<std::shared_ptr<Object>>& getObjects() const = 0;
     virtual void handleCollision(std::shared_ptr<Object> obj) = 0;
+    void addObject(const std::shared_ptr<Object>& object);
+    void removeOffscreenObjects();
+
 
 protected:
     std::shared_ptr<Player> m_player;
@@ -23,9 +26,7 @@ protected:
     void spawnObject(int type, const cv::Scalar& color, Shape shape);
     void updateObjects();
     void checkCollisions(const cv::Rect& faceRect);
-    void removeOffscreenObjects();
 };
-
 
 
 #endif //GAMEMODE_H

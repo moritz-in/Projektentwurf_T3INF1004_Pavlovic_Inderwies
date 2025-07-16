@@ -36,3 +36,6 @@ add_executable(Projektentwurf_T3INF1004_Pavlovic_Inderwies
 target_link_libraries(Projektentwurf_T3INF1004_Pavlovic_Inderwies ${OpenCV_LIBS})
 
 message(STATUS "Ensure 'haarcascade_frontalface_default.xml' is in the build/executable directory or update path in main.cpp.")
+
+enable_testing()
+add_subdirectory(tests)

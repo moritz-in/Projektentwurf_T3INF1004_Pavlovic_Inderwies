@@ -39,8 +39,8 @@ bool Circle::shouldBeRemoved() const
     return m_markedForRemoval;
 }
 
-void Circle::draw(cv::Mat& frame) const
-{
+void Circle::draw(cv::Mat& frame) const  {
     cv::Point center(m_rect.x + m_rect.width/2, m_rect.y + m_rect.height/2);
-    cv::circle(frame, center, m_rect.width/2, m_color, -1);
+    int radius = m_rect.width / 2;
+    cv::circle(frame, center, radius, m_color, -1);
 }

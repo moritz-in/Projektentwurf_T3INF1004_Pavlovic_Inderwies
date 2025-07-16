@@ -11,6 +11,8 @@ public:
     bool isGameOver() const override;
     void handleCollision(std::shared_ptr<Object> object) override;
     void spawnNextObject();
+    int getObjectsSpawned() const;
+
     const std::vector<std::shared_ptr<Object>>& getObjects() const override;
 
 private:

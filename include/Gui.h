@@ -16,7 +16,7 @@ public:
     void drawText(std::string text, int x, int y);
     void showFrame();
     bool isEscapePressed();
-
+    const cv::Mat& getCurrentFrame() const;
 protected:
     cv::Mat currentFrame;
 };

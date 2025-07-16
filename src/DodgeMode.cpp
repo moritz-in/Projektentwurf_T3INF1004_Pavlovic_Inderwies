@@ -69,9 +69,13 @@ void DodgeMode::spawnRandomBall()
 }
 
 //Wenn objekt am Boden angekommen +1 Punkt
-void DodgeMode::handleObjectPassed()
-{
-    m_player->addScore(1);
+void DodgeMode::handleObjectPassed() {
+    for (auto& obj : m_objects) {
+        if (obj->getRect().y >= m_frameHeight) {
+            m_player->addScore(1);
+            obj->markForRemoval();
+        }
+    }
 }
 
 const std::vector<std::shared_ptr<Object>> & DodgeMode::getObjects() const
@@ -79,3 +83,7 @@ const std::vector<std::shared_ptr<Object>> & DodgeMode::getObjects() const
     return m_objects;
 }
 
+void DodgeMode::addObject(const std::shared_ptr<Object>& object)
+{
+    m_objects.push_back(object);
+}

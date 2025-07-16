@@ -48,6 +48,11 @@ void Gui::showFrame() {
     cv::imshow(Constants::FaceGame, currentFrame);
 }
 
-bool Gui::isEscapePressed() {
+bool Gui::isEscapePressed()
+{
     return cv::waitKey(1) == 27;  // 27 ist ASCII für ESC Taste
+}
+const cv::Mat& Gui::getCurrentFrame() const
+{
+    return currentFrame;
 }
