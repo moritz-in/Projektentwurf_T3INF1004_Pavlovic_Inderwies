@@ -15,7 +15,7 @@ Game::~Game() {
     cv::destroyAllWindows();
 }
 
-//Initialiseirung der Gesichtserkennung
+//Initialiseirung der Gesichtserkennung, Prüfen auf Fehler beim laden
 bool Game::initialize() {
 
     if (m_faceCascade.empty()) {
@@ -32,7 +32,7 @@ bool Game::initialize() {
     return true;
 }
 
-// Menu auf der Konsole zeigen
+// Menu auf der Konsole anzeigen
 void Game::displayMenu() {
     std::cout << "=== Reaktionsspiel ===" << std::endl;
     std::cout << "Trage deinen Namen ein: ";
@@ -44,8 +44,8 @@ void Game::displayMenu() {
     int choice = 0;
     while (choice < 1 || choice > 2) {
         std::cout << "\nSpielmodus auswählen:\n";
-        std::cout << "1. Ausweichen\n";
-        std::cout << "2. Einfangen\n";
+        std::cout << "1. Bälle ausweichen\n";
+        std::cout << "2. Quadrate einfangen\n";
         std::cout << "Deine Wahl: ";
 
         if (!(std::cin >> choice)) {
@@ -72,8 +72,9 @@ void Game::displayMenu() {
     }
 }
 
+//verarbeitet ein Kameraframe und ruft die GUI Funktionen zum zeichnen auf
 void Game::processFrame(cv::Mat &frame) {
-    cv::flip(frame, frame, 1);
+    cv::flip(frame, frame, 1);  //Spiegelt das Frame horizontal
 
     std::vector<cv::Rect> faces;
     m_faceCascade.detectMultiScale(frame, faces, 1.1, 3, 0, cv::Size(60, 60));
@@ -83,17 +84,19 @@ void Game::processFrame(cv::Mat &frame) {
         m_currentMode->update(faces[0], frame);
     }
 
-    // Punktzahl immer anzeigen (über Gui)
+    //GUI Elemente aufrufen
     m_gui.drawFrame(frame);
     m_gui.drawObjects(m_currentMode->getObjects());
     m_gui.drawText(Constants::Score + std::to_string(m_player->getScore()), 10, 30);
     m_gui.showFrame();
 }
 
+//startet das Spiel und ruft die Initisalisierung der Kamera sowie Menu Anzeige auf
 void Game::run() {
     if (!initialize()) return;
     displayMenu();
 
+    //wiederholt Kamera Frames laden
     while (true) {
         cv::Mat frame = m_camera.captureFrame();
         if (frame.empty()) break;
@@ -101,9 +104,9 @@ void Game::run() {
         processFrame(frame);
         cv::imshow(m_windowName, frame);
 
-        if (m_gui.isEscapePressed()) break;
+        if (m_gui.isEscapePressed()) break;     //beenden falls ESC gedrükt wird
 
-        if (m_currentMode->isGameOver()) {
+        if (m_currentMode->isGameOver()) {  //beenden falls Game Over
             endGame();
             cv::waitKey(500);
             break;
@@ -111,6 +114,7 @@ void Game::run() {
     }
 }
 
+// wird beim GameOver aufgerufen und zeigt die Spielstatistik
 void Game::endGame() {
     cv::Mat frame;
     while (true) {
@@ -118,10 +122,12 @@ void Game::endGame() {
         if (frame.empty()) break;
         cv::flip(frame, frame, 1);
 
+        //GUI Funktionen für die Anzeige der Spielstatistik nach einem Game Over
         m_gui.drawFrame(frame);
-        m_gui.drawText(Constants::GameOver, frame.cols / 2 - 100, frame.rows / 2 - 40);
+        m_gui.drawText(Constants::GameOver, frame.cols / 2 - 100, frame.rows / 2 - 80);
         m_gui.drawText(Constants::Score + std::to_string(m_player->getScore()), frame.cols / 2 - 100, frame.rows / 2);
         m_gui.drawText(Constants::Player + m_player->getName(), frame.cols / 2 - 100, frame.rows / 2 + 40);
+        m_gui.drawText("Mit ESC Taste schliessen!" ,frame.cols / 2 - 100, frame.rows / 2 + 80);
 
         m_gui.showFrame();
 

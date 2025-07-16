@@ -5,7 +5,7 @@
 
 GameMode::GameMode(std::shared_ptr<Player> player, int frameWidth, int frameHeight) : m_player(player), m_frameWidth(frameWidth), m_frameHeight(frameHeight){}
 
-// erstellt ein neues Objekt
+// erstellt ein neues Objekt welches erscheinen soll
 void GameMode::spawnObject(int speed, const cv::Scalar& color, Shape shape)
 {
     int size = 40; // Feste Größe für bessere Sichtbarkeit
@@ -19,7 +19,7 @@ void GameMode::spawnObject(int speed, const cv::Scalar& color, Shape shape)
     }
 }
 
-//objekte werden mit der update() Funkion aus Objects aktualisiert (bewegen sich nach unten)
+//objekte werden mit der update() Funkion aus Object aktualisiert (bewegen sich nach unten)
 void GameMode::updateObjects()
 {
     for(auto& object : m_objects){
@@ -27,16 +27,17 @@ void GameMode::updateObjects()
     }
 }
 
-//Checkt ob kollision, je nachdem welche art von kollision entfernen oder Handlecolision aufrufen
+//Checkt ob Kollisionen vorkommen
 void GameMode::checkCollisions(const cv::Rect& faceRect)
 {
     for (auto& object : m_objects) {
         if (object->getRect().y > m_frameHeight) {
-            // Nur markieren zum Entfernen, keine Punkte vergeben
+            // Nur markieren zum Entfernen, keine Punkte vergeben, wenn Kollision mit dem Rand des Frames passiert
             object->markForRemoval();
             continue;
         }
 
+        //bei Kollisionen mit dem Gesicht wird handleCollision aufgerufen
         if ((faceRect & object->getRect()).area() > 0) {
             handleCollision(object);
         }

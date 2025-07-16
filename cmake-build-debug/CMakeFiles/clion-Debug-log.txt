@@ -1,5 +1,5 @@
 /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -S "/Users/stefanpavlovic/Library/Mobile Documents/com~apple~CloudDocs/DHBW/2. Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies" -B "/Users/stefanpavlovic/Library/Mobile Documents/com~apple~CloudDocs/DHBW/2. Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/cmake-build-debug"
 -- Ensure 'haarcascade_frontalface_default.xml' is in the build/executable directory or update path in main.cpp.
--- Configuring done (0.0s)
+-- Configuring done (0.1s)
 -- Generating done (0.0s)
 -- Build files have been written to: /Users/stefanpavlovic/Library/Mobile Documents/com~apple~CloudDocs/DHBW/2. Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/cmake-build-debug

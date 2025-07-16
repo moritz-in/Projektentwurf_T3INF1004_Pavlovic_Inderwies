@@ -8,6 +8,7 @@ void Gui::drawFrame(cv::Mat mat)
     currentFrame = mat;
 }
 
+//zeichnet alle Spielobjekte auf das aktuelle Frame
 void Gui::drawObjects(std::vector<std::shared_ptr<Object>> objects)
 {
     for (auto object: objects) {
@@ -33,15 +34,14 @@ void Gui::drawSquare(std::shared_ptr<Square> square)
 
 void Gui::drawCircle(std::shared_ptr<Circle> circle)
 {
-    cv::Point center(circle->getRect().x + circle->getRect().width/2,
-                    circle->getRect().y + circle->getRect().height/2);
-    cv::circle(currentFrame, center,circle->getRect().width/2,
-              circle->getColor(),-1); // -1 für gefüllten Kreis
+    cv::Point center(circle->getRect().x + circle->getRect().width/2,circle->getRect().y + circle->getRect().height/2);
+    cv::circle(currentFrame, center,circle->getRect().width/2, circle->getColor(),-1); // -1 für gefüllten Kreis
 }
 
+//zeigt die Textausgabe auf dem aktuellen Frame
 void Gui::drawText(std::string text, int x, int y)
 {
-    cv::putText(currentFrame, text, cv::Point(x, y), cv::FONT_HERSHEY_SIMPLEX, 0.8, cv::Scalar(255, 255, 255), 2);
+    cv::putText(currentFrame, text, cv::Point(x, y), cv::FONT_HERSHEY_SIMPLEX, 1, Constants::BLUE, 3);
 }
 
 void Gui::showFrame() {

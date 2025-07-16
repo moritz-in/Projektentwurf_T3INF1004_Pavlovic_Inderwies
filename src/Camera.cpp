@@ -32,6 +32,7 @@ int Camera::getHeight() const {
     return m_height;
 }
 
+//aktuelles Frame speichern
 cv::Mat Camera::captureFrame() {
     cv::Mat frame;
     m_cap.read(frame);

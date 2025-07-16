@@ -6,14 +6,17 @@
 CatchMode::CatchMode(std::shared_ptr<Player> player, const int width, const int height, const int totalObjects)
     : GameMode(std::move(player), width, height), m_totalObjects(totalObjects) {}
 
+//aktualisiert alle Objekte
 void CatchMode::update(const cv::Rect &faceRect, cv::Mat &frame)
 {
+    // Aktuelle Zeit in Sekunden berechnen
     double currentTime = static_cast<double>(cv::getTickCount()) / cv::getTickFrequency();
 
     if (m_lastSpawnTime == 0) {
         m_lastSpawnTime = static_cast<int>(std::round(currentTime));
     }
 
+    //neue Objekte spawnen falls die maxAnzahl nicht erreicht und mindestens eine Sekunde vergangen
     if ((m_objectsSpawned < m_totalObjects) && (currentTime - m_lastSpawnTime >= 1.0)) {
         spawnNextObject();
         m_lastSpawnTime = static_cast<int>(std::round(currentTime));
