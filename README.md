@@ -40,6 +40,11 @@ cmake ..
 cmake --build . --target Projektentwurf_T3INF1004_Pavlovic_Inderwies
 ./Projektentwurf_T3INF1004_Pavlovic_Inderwies
 ```
+- Asuführen der Tests:
+```shell
+cd tests
+./run_tests --gtest_color=yes
+```
 ## Bedienung
 1. Bei Programmstart Namen eingeben
 2. Spielmodus wählen (1. = Ausweichen, 2 = Einfangen)

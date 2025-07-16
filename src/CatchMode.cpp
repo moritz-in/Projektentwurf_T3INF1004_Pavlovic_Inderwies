@@ -67,8 +67,14 @@ void CatchMode::spawnNextObject()
 
     m_objectsSpawned++;
 }
+int CatchMode::getObjectsSpawned() const
+{
+    return m_objectsSpawned;
+}
 
-const std::vector<std::shared_ptr<Object>> &CatchMode::getObjects() const {
+
+const std::vector<std::shared_ptr<Object>> &CatchMode::getObjects() const
+{
     return m_objects;
 }
 

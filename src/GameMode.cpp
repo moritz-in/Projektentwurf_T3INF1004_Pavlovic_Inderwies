@@ -43,6 +43,10 @@ void GameMode::checkCollisions(const cv::Rect& faceRect)
         }
     }
 }
+void GameMode::addObject(const std::shared_ptr<Object>& object)
+{
+    m_objects.push_back(object);
+};
 
 //entfernt nichtmehr benötigte objekte
 void GameMode::removeOffscreenObjects()

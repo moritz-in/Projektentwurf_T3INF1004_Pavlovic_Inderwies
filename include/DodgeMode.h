@@ -13,6 +13,7 @@ public:
     void spawnRandomBall();
     void handleObjectPassed();
     const std::vector<std::shared_ptr<Object>>& getObjects() const override;
+    void addObject(const std::shared_ptr<Object>& object);
 
 private:
     bool m_gameOver = false;
