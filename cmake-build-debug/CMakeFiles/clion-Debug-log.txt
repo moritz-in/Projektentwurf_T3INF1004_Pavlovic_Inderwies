@@ -1,5 +1,21 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/aarch64/ninja -G Ninja -S /Users/moritzinderwies/CLionProjects/Projektentwurf_T3INF1004 -B /Users/moritzinderwies/CLionProjects/Projektentwurf_T3INF1004/cmake-build-debug
+/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -S "/Users/stefanpavlovic/Library/Mobile Documents/com~apple~CloudDocs/DHBW/2. Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies" -B "/Users/stefanpavlovic/Library/Mobile Documents/com~apple~CloudDocs/DHBW/2. Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/cmake-build-debug"
+-- The C compiler identification is AppleClang 17.0.0.17000013
+-- The CXX compiler identification is AppleClang 17.0.0.17000013
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Library/Developer/CommandLineTools/usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found OpenCV: /opt/homebrew/Cellar/opencv/4.11.0_1 (found version "4.11.0")
 -- Ensure 'haarcascade_frontalface_default.xml' is in the build/executable directory or update path in main.cpp.
--- Configuring done (0.1s)
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Configuring done (1.8s)
 -- Generating done (0.0s)
--- Build files have been written to: /Users/moritzinderwies/CLionProjects/Projektentwurf_T3INF1004/cmake-build-debug
+-- Build files have been written to: /Users/stefanpavlovic/Library/Mobile Documents/com~apple~CloudDocs/DHBW/2. Theoriephase/Programmieren/Projektentwurf_T3INF1004_Pavlovic_Inderwies/cmake-build-debug
