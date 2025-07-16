@@ -53,3 +53,8 @@ cd tests
    1. Gesicht bewegen, um Objekten auszuweichen oder sie zu fangen
    2. ESC-Taste drücken, um das Spiel sofort zu beenden
 5. Bei Spielende werden der Erreichte Punktestand zum Namen angezeigt 
+
+## Errors:
+- Build und CMake aktualisieren
+- Zu viel licht im hintergrund, beleuchtung von vorne nutzen
+- falls kameraprobleme --> auflösung in Class Camera Konstruktor (Width und Height) --> auf Werte 640 und 480 setzen
