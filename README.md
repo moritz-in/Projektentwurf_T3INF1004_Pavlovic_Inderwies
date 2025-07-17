@@ -23,6 +23,7 @@ Das Projekt besteht aus verschiedenen Hauptkomponenten:
 
 ## UML Diagramm
 
+## Bedienung![Bild 1](https://github.com/user-attachments/assets/0b524262-b1a6-407b-877c-ff09650579b5)
 
 
 
@@ -45,7 +46,7 @@ cmake --build . --target Projektentwurf_T3INF1004_Pavlovic_Inderwies
 cd tests
 ./run_tests --gtest_color=yes
 ```
-## Bedienung
+
 1. Bei Programmstart Namen eingeben
 2. Spielmodus wählen (1. = Ausweichen, 2 = Einfangen)
 3. Im CatchMode die gewünschte Objektanzahl eingeben
