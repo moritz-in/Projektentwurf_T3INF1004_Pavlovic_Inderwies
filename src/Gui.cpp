@@ -1,7 +1,4 @@
 #include "../include/Gui.h"
-#include <opencv2/opencv.hpp>
-#include "../include/Constants.h"
-
 
 void Gui::drawFrame(cv::Mat mat)
 {

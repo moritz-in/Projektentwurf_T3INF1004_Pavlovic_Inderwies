@@ -1,7 +1,4 @@
 #include "../include/Game.h"
-#include "../include/CatchMode.h"
-#include "../include/DodgeMode.h"
-#include <iostream>
 
 
 Game::Game(const std::string& cascadePath) : m_camera() {

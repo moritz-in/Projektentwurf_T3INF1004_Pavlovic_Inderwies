@@ -1,6 +1,8 @@
 #ifndef CATCHMODE_H
 #define CATCHMODE_H
 #include "GameMode.h"
+#include <random>
+#include "../include/Constants.h"
 
 
 class CatchMode : public GameMode {

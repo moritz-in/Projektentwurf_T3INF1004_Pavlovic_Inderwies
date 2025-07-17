@@ -2,6 +2,8 @@
 #define GAMEMODE_H
 #include "Player.h"
 #include "Object.h"
+#include "Circle.h"
+#include "Square.h"
 
 
 class GameMode {

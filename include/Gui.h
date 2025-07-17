@@ -1,6 +1,8 @@
 #ifndef GUI_H
 #define GUI_H
 #include <vector>
+#include <opencv2/opencv.hpp>
+#include "Constants.h"
 #include "Object.h"
 #include "Circle.h"
 #include "Square.h"

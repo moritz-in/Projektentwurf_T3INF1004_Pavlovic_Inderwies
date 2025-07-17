@@ -1,12 +1,14 @@
 #ifndef GAME_H
 #define GAME_H
 #include <opencv2/opencv.hpp>
-#include <string>
+#include <iostream>
 #include "GameMode.h"
 #include "Gui.h"
 #include "Player.h"
 #include "Camera.h"
 #include "Constants.h"
+#include "CatchMode.h"
+#include "DodgeMode.h"
 
 
 class Game {

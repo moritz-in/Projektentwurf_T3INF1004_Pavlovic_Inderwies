@@ -1,7 +1,4 @@
-#include <utility>
 #include "../include/CatchMode.h"
-#include <random>
-#include "../include/Constants.h"
 
 CatchMode::CatchMode(std::shared_ptr<Player> player, const int width, const int height, const int totalObjects)
     : GameMode(std::move(player), width, height), m_totalObjects(totalObjects) {}

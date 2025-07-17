@@ -1,6 +1,5 @@
 #include "../include/GameMode.h"
-#include "../include/Circle.h"
-#include "../include/Square.h"
+
 
 
 GameMode::GameMode(std::shared_ptr<Player> player, int frameWidth, int frameHeight) : m_player(player), m_frameWidth(frameWidth), m_frameHeight(frameHeight){}

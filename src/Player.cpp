@@ -1,6 +1,4 @@
 #include "../include/Player.h"
-#include "../include/Object.h"
-
 
 Player::Player(const std::string& name) : m_name(name) {};
 

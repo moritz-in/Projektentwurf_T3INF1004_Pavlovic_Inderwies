@@ -1,6 +1,10 @@
 #ifndef DODGEMODE_H
 #define DODGEMODE_H
 #include "GameMode.h"
+#include "../include/Constants.h"
+#include <chrono>
+#include <random>
+
 
 
 class DodgeMode : public GameMode {
