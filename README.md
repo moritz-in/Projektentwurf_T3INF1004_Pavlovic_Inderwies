@@ -1,7 +1,15 @@
 # Reaktionsspiel mit Gesichtserkennung
 
 ## Beschreibung
-Interaktives Spiel mit Gesichtserkennung, implementiert in C++ mit OpenCV. Nutzt die Webcam zur Steuerung durch Gesichtsbewegungen.
+Interaktives Spiel mit Gesichtserkennung, implementiert in C++ mit OpenCV. Nutzt die Webcam zur Steuerung durch Gesichtsbewegungen. Das Spiel besteht aus mehreren Kernklassen:
+
+### Wichtigste Klassen
+1. **Game**: Hauptsteuerungsklasse, verwaltet Spielablauf und Moduswechsel
+2. **GameMode**: Abstrakte Basisklasse für Spielmodi (DodgeMode und CatchMode)
+3. **Player**: Verwaltet Spielerinformationen und Punktestand
+4. **Object**: Basisklasse für Spielobjekte (Kreise und Quadrate)
+5. **Camera**: Kamerasteuerung und Frame-Erfassung
+6. **Gui**: Zeichnet Spieloberfläche und verwaltet Anzeige
 
 ### Spielmodi
 1. **DodgeMode (Ausweichmodus)**:
@@ -15,6 +23,9 @@ Interaktives Spiel mit Gesichtserkennung, implementiert in C++ mit OpenCV. Nutzt
    - Punktestand ≥ 0
    - Ende bei allen Objekten gespawnt und verschwunden
 
+## UML Diagramm
+![UML Diagramm](https://github.com/user-attachments/assets/0b524262-b1a6-407b-877c-ff09650579b5)
+
 ## Installation
 
 ### Windows
@@ -24,6 +35,7 @@ Interaktives Spiel mit Gesichtserkennung, implementiert in C++ mit OpenCV. Nutzt
 
 **Installation:**
 ```shell
+
 # 1. Repository klonen
 git clone https://github.com/moritz-in/Projektentwurf_T3INF1004_Pavlovic_Inderwies.git
 cd Projektentwurf_T3INF1004_Pavlovic_Inderwies
@@ -95,7 +107,7 @@ ln -s /usr/local/opt/opencv/share/opencv4/haarcascades/haarcascade_frontalface_d
 ### Windows-spezifisch
 | Problem | Lösung |
 |---------|--------|
-| **Kamera nicht verfügbar** | Geräteindex ändern: `Camera(1)` |
+| **Kamera nicht verfügbar** | Geräteindex ändern: `Camera(1)` in Camera.h |
 | **Niedrige Framerate** | Auflösung reduzieren: `Camera(0, 640, 480)` |
 
 ### macOS-spezifisch
