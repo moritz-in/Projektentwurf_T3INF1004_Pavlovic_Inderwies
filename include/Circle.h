@@ -7,7 +7,6 @@ class Circle : public Object {
 public:
     Circle(cv::Point position, cv::Size size, cv::Scalar color, int speed);
 
-    // Schnitstellenimplementierung
     cv::Rect getRect() const override;
     cv::Scalar getColor() const override;
     Shape getType() const override;

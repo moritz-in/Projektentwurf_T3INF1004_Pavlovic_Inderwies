@@ -11,7 +11,7 @@
 class Gui {
 public:
     void drawFrame(cv::Mat mat);
-    // Helferfunktion, die für alle Objekte, die richtige DRaw funktion aufruft
+    // Helferfunktion, die für alle Objekte, die richtige Draw funktion aufruft
     void drawObjects(std::vector<std::shared_ptr<Object>> objects);
     void drawSquare(std::shared_ptr<Square> square);
     void drawCircle(std::shared_ptr<Circle> circle);

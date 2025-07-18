@@ -21,7 +21,7 @@ bool Game::initialize() {
     }
 
     if (!m_camera.isOpen()) {
-        std::cerr << "Kamera konnte nicht geöffnet werden" << std::endl;
+        std::cerr << "Kamera konnte nicht geoeffnet werden" << std::endl;
         return false;
     }
 
@@ -40,9 +40,9 @@ void Game::displayMenu() {
 
     int choice = 0;
     while (choice < 1 || choice > 2) {
-        std::cout << "\nSpielmodus auswählen:\n";
-        std::cout << "1. Bälle ausweichen\n";
-        std::cout << "2. Quadrate einfangen\n";
+        std::cout << "\nAuswahl des Spielmodus :\n";
+        std::cout << "1. 'Dodge the balls'\n";
+        std::cout << "2. 'Catch the squares'\n";
         std::cout << "Deine Wahl: ";
 
         if (!(std::cin >> choice)) {
@@ -58,7 +58,7 @@ void Game::displayMenu() {
     } else {
         int objectCount = 0;
         while (objectCount <= 0) {
-            std::cout << "Anzahl der gewünschten Objekte angeben: ";
+            std::cout << "Anzahl der gewuenschten Objekte angeben: ";
             if (!(std::cin >> objectCount)) {
                 std::cin.clear();
                 std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
