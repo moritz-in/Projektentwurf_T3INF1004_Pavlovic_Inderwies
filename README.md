@@ -127,6 +127,3 @@ ln -s /usr/local/opt/opencv/share/opencv4/haarcascades/haarcascade_frontalface_d
 # macOS
 ./run_tests --gtest_color=yes
 ```
-
-## Lizenz
-MIT-Lizenz. OpenCV unter BSD-3-Clause-Lizenz.
